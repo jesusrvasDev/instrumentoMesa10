@@ -1,0 +1,21 @@
+{
+  "name": "instrumentomesa10_conbd",
+  "version": "1.0.0",
+  "description": "Instrumento IEU",
+  "license": "ISC",
+  "author": "Jesus Rivas",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.23.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
+  }
+}
