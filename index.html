@@ -50,6 +50,7 @@
                 <div>
                     <h1 class="text-lg font-bold leading-tight">Diagnostico y Caracterización de los Procesos de Control de Estudios, Tecnologías e Infraestructura</h1>
                     <p class="text-xs text-slate-400">Levantamiento de Información Técnica e Institucional</p>
+                    <p class="text-xs text-slate-400">Documento base, es un borrador y aún no esta finalizado</p>
                 </div>
             </div>
             
@@ -209,13 +210,19 @@
                         </div>
 
                         <div class="md:col-span-2">
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Sistema o Proceso Reportado *</label>
-                            <input type="text" name="m1_sistema_reportado" required class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Nombre completo del sistema o proceso">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">La Institución cuenta con un Sistema Único para todos los Procesos Académicos y Administartivos? *</label>
+                            <select name="m1_tiene_sistema" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Si">Si (Para todos los procesos Académicos-Administrativos)</option>
+                                <option value="Parcial">Parcial (Solo para algunos procesos)</option>
+                                <option value="no">No (No cuenta con Sistemas de Información)</option>
+                            </select>
+                            
                         </div>
 
                         <div class="md:col-span-2">
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Fuente del Dato</label>
-                            <textarea name="m1_fuente_dato" rows="2" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Describa el origen principal de la información registrada (ej. Base de Datos Central, Hojas de cálculo, Expedientes físicos)"></textarea>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Fuente de los Datos</label>
+                            <textarea name="m1_fuente_dato" rows="2" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Describa el origen principal de la información registrada en el sistema (ej. Base de Datos Central, Hojas de cálculo, Expedientes físicos)"></textarea>
                         </div>
                     </div>
                 </div>
@@ -227,54 +234,164 @@
                             <span class="bg-blue-900 text-white w-7 h-7 rounded-md inline-flex items-center justify-center text-sm">II</span>
                             Módulo II. Procesos Académicos y Control de Estudios
                         </h2>
-                        <p class="text-sm text-slate-500 mt-1">Sistemas y flujos relacionados a la gestión académica estudiantil.</p>
+                        <p class="text-sm text-slate-500 mt-1">Flujos relacionados a la gestión académica estudiantil.</p>
                     </div>
+                    
+                    <!-- Seccion II.I -->
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">II.I - Gestión de Matrícula (Retiro, reincorporación, cambio de programa y/o sede)</label> 
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="space-y-2">
-                            <label class="block text-xs font-semibold text-slate-700">Módulos / Funciones Presentes:</label>
-                            <div class="space-y-1.5 bg-slate-50 p-3 rounded-lg border border-slate-200">
-                                <label class="flex items-center space-x-2 text-sm">
-                                    <input type="checkbox" name="m2_matricula" class="rounded text-blue-800 focus:ring-blue-800">
-                                    <span>Gestión de Matrícula (Retiro, reincorporación, cambio de programa y/o sede)</span>
-                                </label>
-                                <label class="flex items-center space-x-2 text-sm">
-                                    <input type="checkbox" name="m2_inscripcion" class="rounded text-blue-800 focus:ring-blue-800">
-                                    <span>Proceso de Inscripción (Registro e inscripción por periodo académico)</span>
-                                </label>
-                                <label class="flex items-center space-x-2 text-sm">
-                                    <input type="checkbox" name="m2_control_estudios" class="rounded text-blue-800 focus:ring-blue-800">
-                                    <span>Prosecusión (Seguimiento a la trayectoria académica del estudiante)</span>
-                                </label>
-                                <label class="flex items-center space-x-2 text-sm">
-                                    <input type="checkbox" name="m2_carga_notas" class="rounded text-blue-800 focus:ring-blue-800">
-                                    <span>Carga y Validación de Notas (Por parte del docente)</span>
-                                </label>
-                                <label class="flex items-center space-x-2 text-sm">
-                                    <input type="checkbox" name="m2_planificacion_academica" class="rounded text-blue-800 focus:ring-blue-800">
-                                    <span>Planificación Académica (Oferta académica, Cuadratura)</span>
-                                </label>
-                            </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Unidades Responsables</label>
+                            <input type="text" name="m2_unidades_responsables" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Ej: Secretaría General, Control de Estudios">
                         </div>
 
-                        <div class="space-y-2">
-                            <label class="block text-xs font-semibold text-slate-700">Certificaciones y Registros:</label>
-                            <div class="space-y-1.5 bg-slate-50 p-3 rounded-lg border border-slate-200">
-                                <label class="flex items-center space-x-2 text-sm">
-                                    <input type="checkbox" name="m2_registro_egresados" class="rounded text-blue-800 focus:ring-blue-800">
-                                    <span>Registros de Egresados (Libro de Acta de Grado)</span>
-                                </label>
-                                <label class="flex items-center space-x-2 text-sm">
-                                    <input type="checkbox" name="m2_emision_constancias" class="rounded text-blue-800 focus:ring-blue-800">
-                                    <span>Emisión de Constancias y Certificaciones</span>
-                                </label>
-                                <label class="flex items-center space-x-2 text-sm">
-                                    <input type="checkbox" name="m2_periodos_academicos" class="rounded text-blue-800 focus:ring-blue-800">
-                                    <span>Manejo de Períodos Académicos</span>
-                                </label>
-                            </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Grado de Digitalización</label>
+                            <select name="m2_grado_digitalizacion" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Total">Total (100% Digital / Sin papel)</option>
+                                <option value="Parcial Alto">Parcial Alto (Principalmente digital con soporte físico)</option>
+                                <option value="Parcial Bajo">Parcial Bajo (Mayormente manual/físico)</option>
+                                <option value="Nulo/Manual">Nulo / Completamente Manual</option>
+                            </select>
                         </div>
 
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Puntos de Captura y Validación</label>
+                            <textarea name="m2_puntos_captura" rows="2" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Especifique dónde y quién realiza la captura primaria de datos e ingresa las validaciones"></textarea>
+                        </div>
+                
+                    </div>
+
+                    <!-- Seccion II.II -->
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">II.II - Proceso de Inscripción (Registro e inscripción por periodo académico)</label> 
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Unidades Responsables</label>
+                            <input type="text" name="m2_unidades_responsables" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Ej: Secretaría General, Control de Estudios">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Grado de Digitalización</label>
+                            <select name="m2_grado_digitalizacion" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Total">Total (100% Digital / Sin papel)</option>
+                                <option value="Parcial Alto">Parcial Alto (Principalmente digital con soporte físico)</option>
+                                <option value="Parcial Bajo">Parcial Bajo (Mayormente manual/físico)</option>
+                                <option value="Nulo/Manual">Nulo / Completamente Manual</option>
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Puntos de Captura y Validación</label>
+                            <textarea name="m2_puntos_captura" rows="2" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Especifique dónde y quién realiza la captura primaria de datos e ingresa las validaciones"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Seccion II.III -->
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">II.III - Prosecusión (Seguimiento a la trayectoria académica del estudiante)</label> 
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Unidades Responsables</label>
+                            <input type="text" name="m2_unidades_responsables" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Ej: Secretaría General, Control de Estudios">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Grado de Digitalización</label>
+                            <select name="m2_grado_digitalizacion" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Total">Total (100% Digital / Sin papel)</option>
+                                <option value="Parcial Alto">Parcial Alto (Principalmente digital con soporte físico)</option>
+                                <option value="Parcial Bajo">Parcial Bajo (Mayormente manual/físico)</option>
+                                <option value="Nulo/Manual">Nulo / Completamente Manual</option>
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Puntos de Captura y Validación</label>
+                            <textarea name="m2_puntos_captura" rows="2" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Especifique dónde y quién realiza la captura primaria de datos e ingresa las validaciones"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Seccion II.IV -->
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">II.IV - Carga y Validación de Notas (Por parte del docente)</label> 
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Unidades Responsables</label>
+                            <input type="text" name="m2_unidades_responsables" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Ej: Secretaría General, Control de Estudios">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Grado de Digitalización</label>
+                            <select name="m2_grado_digitalizacion" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Total">Total (100% Digital / Sin papel)</option>
+                                <option value="Parcial Alto">Parcial Alto (Principalmente digital con soporte físico)</option>
+                                <option value="Parcial Bajo">Parcial Bajo (Mayormente manual/físico)</option>
+                                <option value="Nulo/Manual">Nulo / Completamente Manual</option>
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Puntos de Captura y Validación</label>
+                            <textarea name="m2_puntos_captura" rows="2" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Especifique dónde y quién realiza la captura primaria de datos e ingresa las validaciones"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Seccion II.V -->
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">II.V - Planificación Académica (Oferta académica, Cuadratura)</label> 
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Unidades Responsables</label>
+                            <input type="text" name="m2_unidades_responsables" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Ej: Secretaría General, Control de Estudios">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Grado de Digitalización</label>
+                            <select name="m2_grado_digitalizacion" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Total">Total (100% Digital / Sin papel)</option>
+                                <option value="Parcial Alto">Parcial Alto (Principalmente digital con soporte físico)</option>
+                                <option value="Parcial Bajo">Parcial Bajo (Mayormente manual/físico)</option>
+                                <option value="Nulo/Manual">Nulo / Completamente Manual</option>
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Puntos de Captura y Validación</label>
+                            <textarea name="m2_puntos_captura" rows="2" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Especifique dónde y quién realiza la captura primaria de datos e ingresa las validaciones"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Seccion II.VI -->
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">II.VI - Registros de Egresados (Libro de Acta de Grado)</label> 
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Unidades Responsables</label>
+                            <input type="text" name="m2_unidades_responsables" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Ej: Secretaría General, Control de Estudios">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Grado de Digitalización</label>
+                            <select name="m2_grado_digitalizacion" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Total">Total (100% Digital / Sin papel)</option>
+                                <option value="Parcial Alto">Parcial Alto (Principalmente digital con soporte físico)</option>
+                                <option value="Parcial Bajo">Parcial Bajo (Mayormente manual/físico)</option>
+                                <option value="Nulo/Manual">Nulo / Completamente Manual</option>
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Puntos de Captura y Validación</label>
+                            <textarea name="m2_puntos_captura" rows="2" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Especifique dónde y quién realiza la captura primaria de datos e ingresa las validaciones"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Seccion II.VII -->
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">II.VI - Emision de Constancias y Certificaciones</label> 
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-700 mb-1">Unidades Responsables</label>
                             <input type="text" name="m2_unidades_responsables" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-800 focus:border-blue-800 outline-none" placeholder="Ej: Secretaría General, Control de Estudios">
