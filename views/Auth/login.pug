@@ -2,4 +2,25 @@ extends ../layout/index
 
 block contenido
     .py-10
-        h1.text-4xl.my-10.font-extrabold.text-center PAPEL DE TRABAJO , EN CONSTRUCCIÓN
+        h1.text-4xl.my-10.font-extrabold.text-center Formulario de Caracterización de Tecnologías
+            h2.text-4xl.my-10.font-extrabold.text-center Registrese 
+
+    .mt-8.mx-auto.max-w-md
+            div.bg-grey.py-8.px-4.shadow
+                form.space-y-5(method ="POST" action="/auth/register" noValidate)
+                    div
+                        label.block.text-sm.uppercase.text-gray-700.mb-2.font-bold(for="nombre") Tu nombre
+                        input#nombre.w-full.px-3.py-2.border.border-gray-300.rounted-md.placeholder-gray-400(placeholder="Tu nombre" type="text" name="nombre" value=usuario ? usuario.nombre:'')
+                    div
+                        label.block.text-sm.uppercase.text-gray-700.mb-2.font-bold(for="email") Tu correo
+                        input#email.w-full.px-3.py-2.border.border-gray-300.rounted-md.placeholder-gray-400(placeholder="Tu email" type="email" name="email" value=usuario ? usuario.correo:'' )
+                    div
+                        label.block.text-sm.uppercase.text-gray-700.mb-2.font-bold(for="password") Tu Password 
+                        input#password.w-full.px-3.py-2.border.border-gray-300.rounted-md.placeholder-gray-400(placeholder="Tu password" type="password"    name="password")
+                    div
+                        label.block.text-sm.uppercase.text-gray-700.mb-2.font-bold(for="repite_password") Repite tú Password 
+                        input#repite_password.w-full.px-3.py-2.border.border-gray-300.rounted-md.placeholder-gray-400(placeholder="Repite tu password" type="password" name="repite_password")
+                    .flex.items-center.justify-between
+                        a.text-grey-500.text-xs(href="/auth/login") Tienes una cuenta? Inicia sesión
+                        a.text-grey-500.text-xs(href="/auth/olvide-password") Olvide mis password 
+                    input(class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold cursor-pointer py-3"  type="submit" value="Crear cuenta")
